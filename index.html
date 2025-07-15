@@ -1,22 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Patient Vitals Chart</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitals Severity Heatmap</title>
+
+  <!-- D3 libraries -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    #controls {
+      margin-bottom: 20px;
+    }
+
+    #chart svg {
+      background-color: white;
+      border: 1px solid #ccc;
+    }
+
+    text {
+      font-size: 12px;
+    }
+
+    .tooltip {
+      position: absolute;
+      background: #fff;
+      padding: 6px 12px;
+      border: 1px solid #999;
+      border-radius: 4px;
+      pointer-events: none;
+      font-size: 12px;
+      opacity: 0;
+    }
+  </style>
 </head>
 <body>
-  <h2>Severity Heatmap</h2>
-  <label for="vitalSelect">Select Vital:</label>
-  <select id="vitalSelect">
-    <option value="All">All</option>
-    <option value="Heart Rate">Heart Rate</option>
-    <option value="Temperature">Temperature</option>
-    <option value="Respiratory Rate">Respiratory Rate</option>
-    <option value="Blood Pressure">Blood Pressure</option>
-  </select>
+  <h1>Vitals Severity Heatmap</h1>
+
+  <!-- ✅ Dropdown for vital filtering -->
+  <div id="controls">
+    <label for="vitalSelect">Select Vital:</label>
+    <select id="vitalSelect">
+      <option value="All">All</option>
+      <option value="Heart Rate">Heart Rate</option>
+      <option value="Temperature">Temperature</option>
+      <option value="Respiratory Rate">Respiratory Rate</option>
+      <option value="Blood Pressure">Blood Pressure</option>
+    </select>
+  </div>
+
+  <!-- ✅ Chart container -->
   <div id="chart"></div>
+
+  <!-- ✅ Data and Script -->
   <script src="Data/heatmap_data.js"></script>
   <script src="script.js"></script>
 </body>
