@@ -7,7 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h2>Temperature vs. Time</h2>
+  <h2>Severity Heatmap</h2>
+  <label for="vitalSelect">Select Vital:</label>
+  <select id="vitalSelect">
+    <option value="All">All</option>
+    <option value="Heart Rate">Heart Rate</option>
+    <option value="Temperature">Temperature</option>
+    <option value="Respiratory Rate">Respiratory Rate</option>
+    <option value="Blood Pressure">Blood Pressure</option>
+  </select>
   <div id="chart"></div>
   <script src="Data/heatmap_data.js"></script>
   <script src="script.js"></script>
