@@ -1,0 +1,9 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+}
+#chart svg {
+  background: white;
+  border: 1px solid #ccc;
+}
