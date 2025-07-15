@@ -3,7 +3,21 @@ body {
   padding: 20px;
   background: #f9f9f9;
 }
+
 #chart svg {
-  background: white;
+  background-color: white;
   border: 1px solid #ccc;
+  overflow: visible;
+}
+
+text {
+  font-size: 12px;
+}
+
+/* Improve header readability */
+.column-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-anchor: start;
+  font-weight: bold;
 }

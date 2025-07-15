@@ -59,10 +59,12 @@ svg.append("g")
   .enter()
   .append("text")
   .attr("x", (d, i) => margin.left + i * cellSize + cellSize / 2)
-  .attr("y", margin.top - 10)
-  .attr("text-anchor", "middle")
+  .attr("y", margin.top - 15)
+  .attr("text-anchor", "start")
+  .attr("transform", (d, i) => `rotate(-45, ${margin.left + i * cellSize + cellSize / 2}, ${margin.top - 15})`)
   .attr("font-weight", "bold")
   .text(d => d);
+
 
 // ROW LABELS (TIMES)
 svg.append("g")
