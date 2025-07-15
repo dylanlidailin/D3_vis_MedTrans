@@ -1,5 +1,6 @@
-const margin = { top: 50, right: 100, bottom: 50, left: 120 },
-      cellSize = 30;
+const cellSize = 40;
+const margin = { top: 100, right: 100, bottom: 50, left: 120 };
+
 
 const vitals = ["Heart Rate", "Temperature", "Respiratory Rate", "Blood Pressure"];
 const times = Array.from(new Set(heatmapData.map(d => d.time)));
